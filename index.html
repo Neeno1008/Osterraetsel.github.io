@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osterrätsel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      color: #d94f4f;
+    }
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 1rem 0;
+      font-size: 1rem;
+      border: 2px solid #fcb69f;
+      border-radius: 0.75rem;
+    }
+    button {
+      background-color: #fcb69f;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ffa07a;
+    }
+    .message {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Das große Osterrätsel</h1>
+    <p>Gib deinen Farbcode ein<br><small>(Reihenfolge: Rot, Blau, Gelb, Grün, Weiß)</small></p>
+    <input type="text" id="codeInput" placeholder="Beispiel: 46-24-67-51-39">
+    <button onclick="checkCode()">Lösen</button>
+    <div class="message" id="result"></div>
+  </div>
+
+  <script>
+    const correctCode = "46-24-67-51-39"; // <- Ersetze durch deinen richtigen Code
+
+    function checkCode() {
+      const input = document.getElementById("codeInput").value.trim();
+      const result = document.getElementById("result");
+
+      if (input === correctCode) {
+        result.textContent = "Richtig!";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Leider falsch – versuch es nochmal!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
