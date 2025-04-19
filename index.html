@@ -58,22 +58,22 @@
 <body>
   <div class="container">
     <h1>Die Große OsterSuche</h1>
-    <p>Gib deinen Farbcode ein<br><small>(Reihenfolge: Gelb, Grün, Rot, ?, ?)</small></p>
+    <p>Gib deinen Farbcode ein<br><small>(Reihenfolge: Gelb, Grün, Rot, Weiß, ?)</small></p>
     <p>In Noahs, Nils, Merles und euren Zimmer sind keine Eier</p>
-    <input type="text" id="codeInput" placeholder="Beispiel: 1096-945-67-51-39">
+    <input type="text" id="codeInput" placeholder="Beispiel: 1096-945-1254-985">
     <button onclick="checkCode()">Lösen</button>
     <div class="message" id="result"></div>
   </div>
 
   <script>
-    const correctCode = "1196-1105-67-51-39"; // <- Ersetze durch deinen richtigen Code
+    const correctCode = "1196-1105-880-798"; // <- Ersetze durch deinen richtigen Code
 
     function checkCode() {
       const input = document.getElementById("codeInput").value.trim();
       const result = document.getElementById("result");
 
       if (input === correctCode) {
-        result.textContent = "Richtig! Das Geschenk ist bei Noah";
+        result.textContent = "Richtig! Das Geschenk hat Noah geht mit dem Code: 122 zu ihm";
         result.style.color = "green";
       } else {
         result.textContent = "Leider falsch – versuch es nochmal!";
