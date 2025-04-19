@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Osterrätsel</title>
+  <title>OsterSuche</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -57,22 +57,22 @@
 </head>
 <body>
   <div class="container">
-    <h1>Das große Osterrätsel</h1>
-    <p>Gib deinen Farbcode ein<br><small>(Reihenfolge: Rot, Blau, Gelb, Grün, Weiß)</small></p>
-    <input type="text" id="codeInput" placeholder="Beispiel: 46-24-67-51-39">
+    <h1>Die Große OsterSuche</h1>
+    <p>Gib deinen Farbcode ein<br><small>(Reihenfolge: Gelb, Grün, ?, ?, ?)</small></p>
+    <input type="text" id="codeInput" placeholder="Beispiel: 1096-945-67-51-39">
     <button onclick="checkCode()">Lösen</button>
     <div class="message" id="result"></div>
   </div>
 
   <script>
-    const correctCode = "46-24-67-51-39"; // <- Ersetze durch deinen richtigen Code
+    const correctCode = "1196-1105-67-51-39"; // <- Ersetze durch deinen richtigen Code
 
     function checkCode() {
       const input = document.getElementById("codeInput").value.trim();
       const result = document.getElementById("result");
 
       if (input === correctCode) {
-        result.textContent = "Richtig!";
+        result.textContent = "Richtig! Das Geschenk ist bei Noah";
         result.style.color = "green";
       } else {
         result.textContent = "Leider falsch – versuch es nochmal!";
